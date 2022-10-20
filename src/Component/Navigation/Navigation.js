@@ -16,13 +16,13 @@ const Navigation = () => {
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-auto">
-                        <Nav.Link><Link to='/home'>All News</Link></Nav.Link>
+                        <Nav.Link><Link to='/news'>All News</Link></Nav.Link>
 
-                        <Nav.Link href="#pricing">Signup</Nav.Link>
+                        <Nav.Link><Link to="/signup">Signup</Link></Nav.Link>
                         {
-                            false ? <Nav.Link href="#pricing">Signout</Nav.Link>
+                            false ? <Nav.Link><Link to="/home">Signout</Link></Nav.Link>
                                 :
-                                <Nav.Link href="#pricing">Signin</Nav.Link>
+                                <Nav.Link><Link to="/login">Signin</Link></Nav.Link>
                         }
                     </Nav>
                     <Nav>
