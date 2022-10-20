@@ -1,12 +1,16 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
+import SortedNewsCards from '../SortedNewsCard/SortedNewsCards';
 
 const SortedCategoryNews = () => {
     const categoryNews = useLoaderData();
     console.log("Total News : ", categoryNews)
     return (
         <div>
-            Total News In This Category is : {categoryNews.length}
+
+            {
+                categoryNews.map(briefNews => <SortedNewsCards briefNews={briefNews}></SortedNewsCards>)
+            }
         </div>
     );
 };

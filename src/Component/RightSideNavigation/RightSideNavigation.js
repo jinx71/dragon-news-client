@@ -4,6 +4,7 @@ import { FcGoogle } from 'react-icons/fc';
 import { BsGithub, BsFacebook, BsTwitter, BsTwitch, BsDiscord } from 'react-icons/bs';
 import ListGroup from 'react-bootstrap/ListGroup';
 import { Link } from 'react-router-dom';
+import RightBrandCarousal from '../RightBrandCarousal/RightBrandCarousal';
 const RightSideNavigation = () => {
     return (
         <div>
@@ -18,6 +19,7 @@ const RightSideNavigation = () => {
                 <ListGroup.Item><Link to="/"><BsTwitch />Twitch</Link></ListGroup.Item>
                 <ListGroup.Item><Link to="/"><BsDiscord />Discord</Link></ListGroup.Item>
             </ListGroup>
+            <RightBrandCarousal></RightBrandCarousal>
         </div >
     );
 };
