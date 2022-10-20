@@ -1,8 +1,9 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 
 const SideNavigation = ({ categories }) => {
-    console.log(categories)
+    // console.log(categories)
+
     return (
         <div>
             <h5>All Categories : {categories.length}</h5>

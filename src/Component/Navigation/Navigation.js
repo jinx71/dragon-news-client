@@ -3,8 +3,11 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import { useLoaderData } from 'react-router-dom';
+import SideNavigation from '../SideNavigation/SideNavigation';
 
 const Navigation = () => {
+    const categories = useLoaderData();
     return (
 
         <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
@@ -25,6 +28,9 @@ const Navigation = () => {
                     <Nav>
                         <Nav.Link href="#deets">Current User: {`Akash`}</Nav.Link>
 
+                    </Nav>
+                    <Nav className='d-block d-lg-none'>
+                        <SideNavigation categories={categories}></SideNavigation>
                     </Nav>
                 </Navbar.Collapse>
             </Container>
