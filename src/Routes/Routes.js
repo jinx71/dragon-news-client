@@ -1,4 +1,5 @@
 import { createBrowserRouter } from 'react-router-dom'
+import Home from '../Component/Home/Home'
 import SelectedNews from '../Component/SelectedNews/SelectedNews'
 import SortedCategoryNews from '../Component/SortedCategoryNews/SortedCategoryNews'
 import Main from '../Layout/Main'
@@ -14,7 +15,7 @@ export const router = createBrowserRouter([
         children: [
             {
                 path: '/home',
-                element: <div>This is home</div>,
+                element: <Home></Home>,
                 loader: ({ params }) => fetch(`http://localhost:3001/home`)
             },
             {
